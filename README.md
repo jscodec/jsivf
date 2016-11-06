@@ -4,7 +4,9 @@ Ivf Demuxer - Lightweight demuxer to parse and read ivf files. Possibly upgrade 
 ## Installation 
 `npm -i flare-ivf`
 
-The test vectors are hosted via git submodule, new version of git should just pull them when cloning.
+The test vectors are hosted via git submodule.
+To clone submodules use:
+`git submodule update`
 
 ## Usage
 `npm run-script test` Will read the first test vector and dump contents to tmp directory
