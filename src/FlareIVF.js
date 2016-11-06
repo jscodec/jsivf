@@ -31,7 +31,7 @@ class FlareIVF{
 
 
         this.ptr += 12; //consume frame header
-        var frameBuffer = this.data.subarray(this.ptr, frameSize);
+        var frameBuffer = this.data.subarray(this.ptr, this.ptr + frameSize);
         console.log("Frame Size : " + frameSize);
 
         this.ptr += frameSize; //consume frame data
