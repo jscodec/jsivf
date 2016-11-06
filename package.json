@@ -1,12 +1,21 @@
 {
     "name": "FlareIVF",
     "version": "0.0.0",
+    "license": "MIT",
     "keywords": [
         "ivf"
     ],
     "author": "Brian Parra",
     "contributors": [
     ],
-    "dependencies": {},
-    "main": "src/main.js"
+    "dependencies": {
+    },
+    "main": "src/flare-icons.js",
+    "repository": {
+    "type": "git", 
+        "url": "https://github.com/FlareMediaPlayer/FlareIVF.git"
+    }, 
+    "main": "src/main.js", "scripts": {
+        "test" : "node ./tests/test.js"
+    }
 }
