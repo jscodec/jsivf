@@ -14,14 +14,30 @@ class FlareIVF{
         this.frameRate;
         this.timeScale;
         this.frameCount;
+        this.currentFrame = 0;
     }
     
     receiveBuffer(data){
         this.data = new Uint8Array(data);
     }
     
-    process(){
-        this.parseHeader();
+    processFrame() {
+        
+        console.log("Frame Number : " + this.currentFrame);
+        var frameSize = this.data[this.ptr];
+        frameSize |= this.data[this.ptr + 1] << 8;
+        frameSize |= this.data[this.ptr + 2] << 16;
+        frameSize |= this.data[this.ptr + 3] << 24;
+
+
+        this.ptr += 12; //consume frame header
+        var frameBuffer = this.data.subarray(this.ptr, frameSize);
+        console.log("Frame Size : " + frameSize);
+
+        this.ptr += frameSize; //consume frame data
+        this.currentFrame++;
+        return frameBuffer;
+        
     }
     
     parseHeader(){
@@ -47,6 +63,9 @@ class FlareIVF{
         this.timeScale = this.data[23] << 24 | this.data[22] << 16 | this.data[21] <<8 | this.data[20];
         this.frameCount = this.data[27] << 24 | this.data[26] << 16 | this.data[25] <<8 | this.data[24];
         
+        this.ptr = this.headerLength;
+        
+        console.log("**** HEADER DATA ****");
         console.log("Signature : " + this.signature);
         console.log("Version :" + this.version);
         console.log("Header Length :" + this.headerLength);
@@ -56,6 +75,7 @@ class FlareIVF{
         console.log("Frame rate : " + this.frameRate);
         console.log("Time scale : " + this.timeScale);
         console.log("Frame Count : " + this.frameCount);
+        console.log("**** HEADER DATA ****");
     }
     
 }

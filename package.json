@@ -16,6 +16,7 @@
         "url": "https://github.com/FlareMediaPlayer/FlareIVF.git"
     }, 
     "main": "src/main.js", "scripts": {
-        "test" : "node ./tests/test.js"
+        "test" : "node ./tests/test.js",
+        "clean" : "rm -rf tmp"
     }
 }
