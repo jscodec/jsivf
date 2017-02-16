@@ -1,8 +1,8 @@
-var FlareIVF = require('../src/FlareIVF.js');
+var jsivf = require('../src/jsivf.js');
 var fs = require('fs');
 
 //Create a new IVF demuxer
-var ivf = new FlareIVF();
+var ivf = new jsivf();
 
 //Read in the first test vector
 var vectorPath = 'vp8-test-vectors/';

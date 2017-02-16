@@ -14,11 +14,11 @@
     },  
     "repository": {
     "type": "git", 
-        "url": "https://github.com/FlareMediaPlayer/FlareIVF.git"
+        "url": "https://github.com/jscodec/jsivf.git"
     }, 
     "scripts": {
         "test" : "node ./tests/test.js",
         "clean" : "rm -rf tmp",
-        "build" : "browserify interfaces/flare-ivf.js > builds/flare-ivf.js"
+        "build" : "browserify interfaces/jsivf-main.js > builds/jsivf.js"
     }
 }
