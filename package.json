@@ -1,6 +1,6 @@
 {
     "name": "jsivf",
-    "main": "src/FlareIVF.js",
+    "main": "src/jsivf.js",
     "version": "0.0.0",
     "license": "MIT",
     "keywords": [
