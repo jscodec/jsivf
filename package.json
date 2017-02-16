@@ -1,6 +1,7 @@
 {
-    "name": "flare-ivf",
-    "version": "0.0.1",
+    "name": "jsivf",
+    "main": "src/FlareIVF.js",
+    "version": "0.0.0",
     "license": "MIT",
     "keywords": [
         "ivf"
@@ -9,14 +10,15 @@
     "contributors": [
     ],
     "dependencies": {
-    },
-    "main": "src/flare-icons.js",
+        "browserify": "^13.0.1"
+    },  
     "repository": {
     "type": "git", 
         "url": "https://github.com/FlareMediaPlayer/FlareIVF.git"
     }, 
-    "main": "src/main.js", "scripts": {
+    "scripts": {
         "test" : "node ./tests/test.js",
-        "clean" : "rm -rf tmp"
+        "clean" : "rm -rf tmp",
+        "build" : "browserify interfaces/flare-ivf.js > builds/flare-ivf.js"
     }
 }

@@ -1,3 +1,10 @@
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+var FlareIVF = require('../src/FlareIVF');
+
+window.FlareIvf = FlareIVF;
+module.exports = FlareIVF;
+
+},{"../src/FlareIVF":2}],2:[function(require,module,exports){
 "use strict";
 
 class FlareIVF{
@@ -64,8 +71,23 @@ class FlareIVF{
         this.frameCount = this.data[27] << 24 | this.data[26] << 16 | this.data[25] <<8 | this.data[24];
         
         this.ptr = this.headerLength;
+        
+        /*
+        console.log("**** HEADER DATA ****");
+        console.log("Signature : " + this.signature);
+        console.log("Version :" + this.version);
+        console.log("Header Length :" + this.headerLength);
+        console.log("Codec : " + this.codec);
+        console.log("Width : " + this.width);
+        console.log("Height : " + this.height);
+        console.log("Frame rate : " + this.frameRate);
+        console.log("Time scale : " + this.timeScale);
+        console.log("Frame Count : " + this.frameCount);
+        console.log("**** HEADER DATA ****");
+        */
     }
     
 }
 
 module.exports = FlareIVF;
+},{}]},{},[1]);
