@@ -12,7 +12,7 @@ git submodule update
 `
 
 ## Usage
-`
+```
 var jsivf = require('../src/jsivf.js');
 var ivf = new jsivf();
 
@@ -28,7 +28,7 @@ while(ivf.currentFrame < ivf.frameCount){
     var filename = 'frame_' + ivf.currentFrame + '.bin';
     fs.writeFileSync(dir + '/' + filename, frameBuffer);
 }
-`
+```
 
 ## Tests
 `npm run-script test` Will read the first test vector and dump contents to tmp directory
