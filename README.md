@@ -1,4 +1,4 @@
-# FlareIVF
+# jsivf
 Ivf Demuxer - Lightweight demuxer to parse and read ivf files. Possibly upgrade later for usage in ogv.js
 
 ## Installation 
