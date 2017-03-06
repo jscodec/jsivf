@@ -1,4 +1,4 @@
-var FlareIVF = require('../src/jsivf');
+var JsIvf = require('../src/jsivf');
 
 
 if(window)

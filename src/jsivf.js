@@ -1,6 +1,6 @@
 "use strict";
 
-class FlareIVF{
+class JsIvf{
     
     constructor(){
         this.data = null;
@@ -68,4 +68,4 @@ class FlareIVF{
     
 }
 
-module.exports = FlareIVF;
+module.exports = JsIvf;
